@@ -1,0 +1,38 @@
+a{
+    text-decoration: none;
+}
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.floatfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.floatfix{
+    *zoom: 1;
+}
+body{
+    background-color: #f0f0f0;
+}
+ body{
+    background-image: url(../images/4.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+.login .form-group{
+    padding-bottom: 30px;
+}
+ form{
+    width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -160px;
+    margin-top: -125px;
+}
+.form-group button{
+    margin: 0,auto;
+}

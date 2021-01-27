@@ -1,0 +1,26 @@
+ .main-articles{
+     float: left;
+    border: 1px solid #c0c0c0;
+    /* padding: 0 15px; */
+    margin: 0 15px;
+    min-height: 468px;
+    width: 930px;
+}
+.title{
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.title h2{
+    text-align: center;
+}
+.title p {
+    text-align: center;
+    font-size: 14px;
+}
+.title p span{
+    padding: 0 10px;
+}
+.content p{
+    text-indent: 2em;
+    font-size: 16px;
+}

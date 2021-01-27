@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客人</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/article.css">
+</head>
+<body>
+   <%- include('./public/header') %>  
+   <section class="main floatfix">
+       <!-- 注意includ的写法，%和-无空格，不加后缀名 -->
+        <%- include('./public/aside') %> 
+        <section class="main-articles articles">
+            <section class="title">
+                <h2><%=article.articleTitle %> </h2>
+                <p>
+                    <!-- %和=中间不能有空格 -->
+                    <span>作者：<%=article.author %> </span>
+                    <span>发布时间：<%=article.time %> </span>
+                    <span>点击量：<%=article.click %> </span>
+                </p>
+            </section>
+            <section class="content">
+                <p><%=article.content %> </p>
+            </section>
+        </section>
+   </section>
+</body>
+</html>

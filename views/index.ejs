@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    
+  </head>
+  <body>
+    <header>
+      <h1>无聊人的博客</h1>
+    </header>
+
+    <section class="main floatfix">
+      <aside>
+        <section class='main-asie-avatar'>
+          <img src="/images/15.jpg" alt="">
+        </section>
+        <ul>
+          <li><a href="/">博客首页</a></li>
+          <li><a href="/about">关于博客</a></li>
+          <li><a href="/edit">撰写文章</a></li>
+          <li><a href="/login">登录博客</a></li>
+        </ul>
+      </aside>
+      <section class="main-article">
+        <ul>
+          <% for(var i=0,max = articles.length;i<max;i++){%>
+            <li class="main-articles-item">
+              <h2> <a href='/articles/<%=articles[i].articleID %> '> <%=articles[i].articleTitle %> </a></h2>
+              <section class='main-articles-items-des'>
+                <!-- %和=之间不能有空隙 -->
+              <p><span>作者：<%=articles[i].author%></span>
+                <span>发布时间：<%=articles[i].time %> </span>
+                <span>浏览量：<%=articles[i].click %> </span>
+                <span class="right"><a href="/modify/<%=articles[i].articleID %>">修改</a></span>
+                <span class="right"><a href="/delete/<%=articles[i].articleID %>">删除</a></span>
+              </p>
+              </section>
+            </li>
+            <% } %>         
+        </ul>
+      </section>
+      <% if(articleNumber>=7) { %> 
+      <section class="page">
+          <% for(let i=1;i<=pageNum;i++){ %>
+            <span 
+            <% if(i ==page) { %>
+              class='active'
+           <% } %> 
+            >
+              
+             <a href="/?page=<%=i %> "> <%=i  %> </a>
+            </span>
+
+        <%  } %> 
+      </section>
+      <% } %> 
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>

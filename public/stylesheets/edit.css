@@ -1,0 +1,27 @@
+.main-edit{
+    float: left;
+    margin: 0 15px;
+    width: 930px;
+}
+.edit label{
+    width: 10%;
+    text-align: center;
+    display: inline-block;
+}
+.form-group input{
+    width: 800px;
+    display: inline-block;
+}
+textarea {
+    height: 350px;
+    width: 800px;
+    display: inline-block;
+
+}
+label{
+    vertical-align: top;
+}
+.position{
+    margin-left: 480px;
+
+}
