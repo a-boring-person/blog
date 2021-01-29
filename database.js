@@ -17,7 +17,7 @@ database.connect(function(err){
         return;
     }
 
-    console.log('connected as id'+mysql.threadId);
+    console.log('数据库已连接');
 });
 
 module.exports = database;
